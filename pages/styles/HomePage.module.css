@@ -1,0 +1,13 @@
+.HomePage__forecasts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.HomePage__search {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}

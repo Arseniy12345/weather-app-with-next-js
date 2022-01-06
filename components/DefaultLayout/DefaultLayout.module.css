@@ -1,0 +1,33 @@
+.DefaultLayout__header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 24px;
+  background-color: #0d47a1;
+  color: #ffffff;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.DefaultLayout__content {
+  margin-top: 54px;
+  padding: 24px 24px 12px 24px;
+}
+
+.DefaultLayout__button {
+  height: 100%;
+  padding: 0px 24px;
+  border-right: 1px solid #d2d2d2;
+  font-size: 16px;
+  line-height: 54px;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+.DefaultLayout__button:hover {
+  background-color: #093170;
+}

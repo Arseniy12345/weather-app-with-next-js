@@ -1,0 +1,29 @@
+.City {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.City__cityName {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 600;
+  color: #263137;
+  margin-bottom: 24px;
+}
+
+.City__weather {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.City__weather_daily {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.City__weather_hourly {
+  margin-top: 18px;
+}

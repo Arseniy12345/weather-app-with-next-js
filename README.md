@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Как развернуть
 
-## Getting Started
+---
 
-First, run the development server:
+1. Склонируйте репозиторий
+2. В папке проекта, в командной строке прописать `npm install`
+3. Далее необходимо собрать проект `npm run build`
+4. Запускаем Next.js сервер `npm run start`
+5. В браузере перейти на [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## О приложении
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Приложение имеет 3 страницы:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. **Главная страница** ([http://localhost:3000/](http://localhost:3000/)) - здесь показан прогноз погоды в некоторых крупных городах РФ. Также здесь можно найти интересующий вас город и перейти на страницу прогноза погоды о нем.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   > При первом запросе сервер отдает html файл страницы, который уже находится в собранном виде на сервере. Данный файл html пересобирается каждые 15 минут на сервере. Если нужно поменять период пересборки - pages/index.js строка 116, после по новой собрать проект `npm run build` и запустить `npm run start`
 
-## Learn More
+2. **Страница погоды выбранного города** ([http://localhost:3000/city/[Название города]](http://localhost:3000/city/Москва)) - подробный прогноз погоды выбранного города.
 
-To learn more about Next.js, take a look at the following resources:
+   > При первом запросе сервер делает запрос к api для получения данных о прогнозе погоды и собирает страницу, после чего готовая html страница с необходимыми ресурсами отправляется клиенту.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Страница "О приложении"** ([http://localhost:3000/about](http://localhost:3000/about))
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   > Данная страница явялется статической, хранится в собранном виде на сервере и более не пересобирается.
 
-## Deploy on Vercel
+## Примечание
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Версия Node.js - 12
