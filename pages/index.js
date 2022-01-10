@@ -96,8 +96,8 @@ export async function getStaticProps() {
     const { lat, lon } = cityInfo;
 
     try {
-      const response = api.getForecast(lat, lon);
-      forecast.push({ name: worldCity, ...response });
+      const response = await api.getForecast(lat, lon);
+      forecast.push({ name: worldCity, ...response.data });
     } catch (err) {}
   }
 

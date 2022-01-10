@@ -31,7 +31,7 @@ export const getCitiesForecast = (nameCities) => async (dispatch, getState) => {
 
     try {
       const response = await api.getForecast(lat, lon);
-      forecasts.push({ name: nameCity, ...response });
+      forecasts.push({ name: nameCity, ...response.data });
     } catch (err) {
       dispatch(setIsError());
     }

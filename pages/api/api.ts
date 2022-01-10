@@ -7,9 +7,8 @@ const HttpClient = axios.create({
 
 export const api = {
   getForecast(lat, lon) {
-    // return HttpClient.get(
-    //   `onecall?lat=${lat}&lon=${lon}&exclude=${"minutely,alerts"}&units=metric&appid=${"fa27cbfcb730a9000e68b209c47b9aa2"}&lang=${"ru"}`
-    // );
-    return testData;
+    return HttpClient.get(
+      `onecall?lat=${lat}&lon=${lon}&exclude=${"minutely,alerts"}&units=metric&appid=${"fa27cbfcb730a9000e68b209c47b9aa2"}&lang=${"ru"}`
+    );
   },
 };

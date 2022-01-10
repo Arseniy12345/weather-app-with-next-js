@@ -78,8 +78,8 @@ export async function getServerSideProps({ params: { name }, req }) {
     let forecast = null;
 
     try {
-      const response = api.getForecast(lat, lon);
-      forecast = getCorrectForecasts([{ name, ...response }]);
+      const response = await api.getForecast(lat, lon);
+      forecast = getCorrectForecasts([{ name, ...response.data }]);
     } catch (err) {
       return {
         props: {
