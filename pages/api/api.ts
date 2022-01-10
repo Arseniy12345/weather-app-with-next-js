@@ -1,5 +1,4 @@
 import axios from "axios";
-import { testData } from "./test-data";
 
 const HttpClient = axios.create({
   baseURL: "https://api.openweathermap.org/data/2.5/",
